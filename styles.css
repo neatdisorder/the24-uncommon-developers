@@ -1,0 +1,192 @@
+/*
+
+calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])))
+
+*/
+
+
+/* RESET CSS */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* SET UP CUSTOM FONTS */
+
+@font-face {
+    font-family: "Tiempos Fine";
+    src: url('fonts/TiemposFine-Regular.otf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Sofia Pro";
+    src: url('fonts/SofiaPro-Bold.otf');
+    font-weight: 800;
+}
+
+@font-face {
+    font-family: "Sofia Pro";
+    src: url('fonts/SofiaPro-Regular.otf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Sofia Pro";
+    src: url('fonts/SofiaPro-Light.otf');
+    font-weight: 300;
+}
+
+/* PAGE STYLES */
+
+body {
+    background-color: #FFFFFF;
+}
+
+body > header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: calc(40px + (58 - 40) * ((100vw - 360px) / (1024 - 360)));
+    padding-bottom: calc(40px + (58 - 40) * ((100vw - 360px) / (1024 - 360)));
+}
+
+body > header > #the-24-logo-black {
+    width: calc(56px + (80 - 56) * ((100vw - 360px) / (1024 - 360)));
+}
+
+body > main {
+    margin-left: calc(20px + (28 - 20) * ((100vw - 360px) / (1024 - 360)));
+    margin-right: calc(20px + (28 - 20) * ((100vw - 360px) / (1024 - 360)));
+    border-bottom: 2px solid #818181;
+}
+
+body > main > .location-container {
+    display: flex;
+    flex-direction: column;
+    border-top: 2px solid #818181;
+}
+
+body > main > .location-container > .location-title {
+    padding-top: calc(15px + (22 - 15) * ((100vw - 360px) / (1024 - 360)));
+    padding-bottom: calc(15px + (22 - 15) * ((100vw - 360px) / (1024 - 360)));
+    padding-left: calc(12px + (18 - 12) * ((100vw - 360px) / (1024 - 360)));
+}
+
+body > main > .location-container > .location-title > h2 {
+    font-family: 'Tiempos Fine', serif;
+    text-transform: uppercase;
+    color: #0c0d0d;
+    font-size: calc(22px + (32 - 22) * ((100vw - 360px) / (1024 - 360)));
+    font-weight: 400;
+}
+
+body > main > .location-container > .sections-container {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.25s ease-in-out, opacity 0.25s ease-in-out;
+}
+
+body > main > .location-container.open > .sections-container {
+    max-height: 500px;
+    opacity: 1;
+}
+
+body > main > .location-container > .sections-container > .location-section {
+    border-top: 2px solid #818181;
+}
+
+body > main > .location-container > .sections-container > .location-section > .section-title {
+    padding-top: calc(10px + (14 - 10) * ((100vw - 360px) / (1024 - 360)));
+    padding-bottom: calc(10px + (14 - 10) * ((100vw - 360px) / (1024 - 360)));
+    padding-left: calc(12px + (18 - 12) * ((100vw - 360px) / (1024 - 360)));
+    color: #0c0d0d;
+    
+}
+
+body > main > .location-container > .sections-container > .location-section > .section-title > h3 {
+    text-transform: uppercase;
+    font-family: "Sofia Pro", sans-serif;
+    font-weight: 300;
+    font-size: calc(13px + (18 - 13) * ((100vw - 360px) / (1024 - 360)));
+}
+
+body > main > .location-container > .sections-container > .location-section > .section-title > h3 > .building-name {
+    font-family: 'Tiempos Fine', serif;
+    font-weight: 400;
+}
+
+body > main > .location-container > .sections-container > .location-section > .location-entry {
+    display: flex;
+    padding-top: calc(10px + (14 - 10) * ((100vw - 360px) / (1024 - 360)));
+    padding-bottom: calc(10px + (14 - 10) * ((100vw - 360px) / (1024 - 360)));
+    padding-left: calc(12px + (18 - 12) * ((100vw - 360px) / (1024 - 360)));
+    border-top: 2px solid #ececed;
+    gap: calc(10px + (14 - 10) * ((100vw - 360px) / (1024 - 360)));
+    align-items: center;
+}
+
+body > main > .location-container > .sections-container > .location-section > .location-entry:first-of-type {
+    border: none;
+}
+
+body > main > .location-container > .sections-container > .location-section > .location-entry > .entry-icon {
+    background-color: #0c0d0d;
+    width: calc(21px + (30 - 21) * ((100vw - 360px) / (1024 - 360)));
+    height: calc(21px + (30 - 21) * ((100vw - 360px) / (1024 - 360)));
+    border-radius: 50%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Sofia Pro", sans-serif;
+    font-weight: 800;
+    font-size: calc(10px + (14 - 10) * ((100vw - 360px) / (1024 - 360)));
+    border: 1px solid #0c0d0d;
+}
+
+body > main > .location-container > .sections-container > .location-section > .location-entry > .entry-icon.bg-black {
+    background-color: #0c0d0d;
+    color: #FFFFFF;
+}
+
+body > main > .location-container > .sections-container > .location-section > .location-entry > .entry-icon.bg-orange {
+    background-color: #ee6f3d;
+    color: #0c0d0d;
+}
+
+body > main > .location-container > .sections-container > .location-section > .location-entry > .entry-name {
+    font-family: "Sofia Pro", sans-serif;
+    font-weight: 300;
+    color: #0c0d0d;
+    text-transform: uppercase;
+    font-size: calc(11px + (16 - 11) * ((100vw - 360px) / (1024 - 360)));
+}
+
+body > footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+body > footer > .footer-container {
+    background-color: #0c0d0d;
+    padding-top: calc(7px + (10 - 7) * ((100vw - 360px) / (1024 - 360)));
+    padding-bottom: calc(7px + (10 - 7) * ((100vw - 360px) / (1024 - 360)));
+    padding-left: calc(15px + (22 - 15) * ((100vw - 360px) / (1024 - 360)));
+    padding-right: calc(15px + (22 - 15) * ((100vw - 360px) / (1024 - 360)));
+    margin-left: calc(20px + (28 - 20) * ((100vw - 360px) / (1024 - 360)));
+    margin-right: calc(20px + (28 - 20) * ((100vw - 360px) / (1024 - 360)));
+    margin-bottom: calc(20px + (28 - 20) * ((100vw - 360px) / (1024 - 360)));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+body > footer > .footer-container > p {
+    color: #ffffff;
+    font-family: "Sofia Pro", sans-serif;
+    font-weight: 400;
+    font-size: calc(9px + (13 - 9) * ((100vw - 360px) / (1024 - 360)));
+}
