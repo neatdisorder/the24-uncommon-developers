@@ -63,6 +63,7 @@ body > header > #the-24-logo-black {
 body > main {
     margin-left: calc(20px + (28 - 20) * ((100vw - 360px) / (1024 - 360)));
     margin-right: calc(20px + (28 - 20) * ((100vw - 360px) / (1024 - 360)));
+    margin-bottom: calc(130px + (182 - 130) * ((100vw - 360px) / (1024 - 360)));
     border-bottom: 2px solid #818181;
 }
 
@@ -82,7 +83,7 @@ body > main > .location-container > .location-title > h2 {
     font-family: 'Tiempos Fine', serif;
     text-transform: uppercase;
     color: #0c0d0d;
-    font-size: calc(22px + (32 - 22) * ((100vw - 360px) / (1024 - 360)));
+    font-size: calc(27px + (40 - 27) * ((100vw - 360px) / (1024 - 360)));
     font-weight: 400;
 }
 
@@ -114,7 +115,7 @@ body > main > .location-container > .sections-container > .location-section > .s
     text-transform: uppercase;
     font-family: "Sofia Pro", sans-serif;
     font-weight: 300;
-    font-size: calc(13px + (18 - 13) * ((100vw - 360px) / (1024 - 360)));
+    font-size: calc(16px + (23 - 16) * ((100vw - 360px) / (1024 - 360)));
 }
 
 body > main > .location-container > .sections-container > .location-section > .section-title > h3 > .building-name {
@@ -146,7 +147,7 @@ body > main > .location-container > .sections-container > .location-section > .l
     justify-content: center;
     font-family: "Sofia Pro", sans-serif;
     font-weight: 800;
-    font-size: calc(10px + (14 - 10) * ((100vw - 360px) / (1024 - 360)));
+    font-size: calc(12px + (17 - 12) * ((100vw - 360px) / (1024 - 360)));
     border: 1px solid #0c0d0d;
     text-transform: uppercase;
 }
@@ -187,7 +188,7 @@ body > main > .location-container > .sections-container > .location-section > .l
     font-weight: 300;
     color: #0c0d0d;
     text-transform: uppercase;
-    font-size: calc(11px + (16 - 11) * ((100vw - 360px) / (1024 - 360)));
+    font-size: calc(13px + (18 - 13) * ((100vw - 360px) / (1024 - 360)));
 }
 
 body > footer {
@@ -212,9 +213,17 @@ body > footer > .footer-container {
     align-items: center;
 }
 
-body > footer > .footer-container > p {
+body > footer > .footer-container > #the-24-logo-white-container {
+    display: flex;
+}
+
+body > footer > .footer-container > #the-24-logo-white-container > #the-24-logo-white {
+    width: calc(30px + (42 - 30) * ((100vw - 360px) / (1024 - 360)));
+}
+
+body > footer > .footer-container > a {
     color: #ffffff;
     font-family: "Sofia Pro", sans-serif;
     font-weight: 400;
-    font-size: calc(9px + (13 - 9) * ((100vw - 360px) / (1024 - 360)));
+    font-size: calc(16px + (22 - 16) * ((100vw - 360px) / (1024 - 360)));
 }

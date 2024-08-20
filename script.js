@@ -6,6 +6,8 @@ const containerTitles = document.querySelectorAll(
   "body > main > .location-container > .location-title"
 );
 
+const headerLogo = document.querySelector("body > header > #the-24-logo-black");
+
 containerTitles.forEach((containerTitle) => {
   containerTitle.addEventListener("click", () => {
     locationContainers.forEach((locationContainer) => {
@@ -19,5 +21,11 @@ containerTitles.forEach((containerTitle) => {
         locationContainer.classList.remove("open");
       }
     });
+  });
+});
+
+headerLogo.addEventListener("click", () => {
+  locationContainers.forEach((locationContainer) => {
+    locationContainer.classList.remove("open");
   });
 });
